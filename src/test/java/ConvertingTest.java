@@ -4,11 +4,12 @@ import org.junit.Test;
 public class ConvertingTest
 {
     @Test
-    public void testIDK()
+    public void testIDK() throws Exception
     {
-        int baseA = 8;
-        int baseB = 2;
-        int number = 346;
-        assertEquals(11100110, ConvFromDec.convert(baseB, ConvToDec.convert(baseA, number)));
+        int baseA = 2;
+        int baseB = 3;
+        int number = 101011;
+
+        assertEquals(1121, ConvertBases.initConversion(baseA, baseB, number));
     }
 }
