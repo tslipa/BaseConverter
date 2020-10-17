@@ -21,12 +21,19 @@ public class Main
             {
                 throw new Exception("One of the bases is not between 2 and 10.");
             }
+            else if (baseA == baseB)
+            {
+                throw new Exception("The bases are the same.");
+            }
 
             int minNumber = 0;
             if (number < minNumber)
             {
                 throw new Exception("The number should be a positive integer.");
             }
+
+            int result = ConvFromDec.convert(baseB, ConvToDec.convert(baseA, number));
+            System.out.println(result);
         }
         catch (NumberFormatException ex)
         {
