@@ -17,7 +17,8 @@ public class Main
             baseB = Integer.parseInt(args[1]);
             number = Integer.parseInt(args[2]);
 
-            int result = ConvertBases.initConversion(baseA, baseB, number);
+            DataCheck.initCheck(baseA, baseB, number);
+            int result = Converter.initConversion(baseA, baseB, number);
             System.out.println(result);
         }
         catch (NumberFormatException ex)
