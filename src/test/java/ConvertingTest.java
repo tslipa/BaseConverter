@@ -12,12 +12,6 @@ public class ConvertingTest
         int baseB = 3;
         int number = 101011;
 
-        int DELETE_TEST = 23;
-        if (DELETE_TEST == 23)
-        {
-            DELETE_TEST++;
-        }
-
         try
         {
             assertEquals(1121, Converter.initConversion(baseA, baseB, number));
