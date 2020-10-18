@@ -1,7 +1,9 @@
 public class Converter
 {
-    public static int initConversion(int baseA, int baseB, int number)
+    public static int initConversion(int baseA, int baseB, int number) throws ConversionException
     {
+        DataCheck.initCheck(baseA, baseB, number);
+
         int decimalFormat = number;
         if (baseA != 10)
         {

@@ -1,4 +1,6 @@
 import static org.junit.Assert.*;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 public class ConvertingTest
@@ -10,6 +12,27 @@ public class ConvertingTest
         int baseB = 3;
         int number = 101011;
 
-        assertEquals(1121, Converter.initConversion(baseA, baseB, number));
+        try
+        {
+            assertEquals(1121, Converter.initConversion(baseA, baseB, number));
+        }
+        catch (ConversionException e) { }
+    }
+
+    @Test
+    public void testConversionException()
+    {
+        int baseA = 2;
+        int baseB = -3;
+        int number = 101011;
+
+        try
+        {
+            Converter.initConversion(baseA, baseB, number);
+            Assert.fail("Expected exception to be thrown");
+        }
+        catch (ConversionException e) { }
+
+
     }
 }

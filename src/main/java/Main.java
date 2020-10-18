@@ -11,13 +11,13 @@ public class Main
         int baseA;
         int baseB;
         int number;
+
         try
         {
             baseA = Integer.parseInt(args[0]);
             baseB = Integer.parseInt(args[1]);
             number = Integer.parseInt(args[2]);
 
-            DataCheck.initCheck(baseA, baseB, number);
             int result = Converter.initConversion(baseA, baseB, number);
             System.out.println(result);
         }
@@ -25,7 +25,7 @@ public class Main
         {
             System.out.println("Wrong arguments. Positive integers required.");
         }
-        catch (Exception ex)
+        catch (ConversionException ex)
         {
             System.out.println(ex.getMessage());
         }
