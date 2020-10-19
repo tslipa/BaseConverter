@@ -1,5 +1,7 @@
-public class DataCheck
+public final class DataCheck
 {
+    private DataCheck() {}
+
     public static void initCheck(int baseA, int baseB, int number) throws ConversionException
     {
         checkBases(baseA, baseB);
@@ -10,6 +12,7 @@ public class DataCheck
     {
         int minBase = 2;
         int maxBase = 10;
+
         if (baseA < minBase || baseB < minBase || baseA > maxBase || baseB > maxBase)
         {
             throw new ConversionException("One of the bases is not between 2 and 10.");
@@ -23,6 +26,7 @@ public class DataCheck
     private static void checkNumber(int number, int base) throws ConversionException
     {
         int minNumber = 0;
+
         if (number < minNumber)
         {
             throw new ConversionException("The number should be a positive integer.");

@@ -1,17 +1,20 @@
-public class Converter
+public final class Converter
 {
+    private Converter() {}
+
     public static int initConversion(int baseA, int baseB, int number) throws ConversionException
     {
         DataCheck.initCheck(baseA, baseB, number);
+        int base10 = 10;
 
         int decimalFormat = number;
-        if (baseA != 10)
+        if (baseA != base10)
         {
             decimalFormat = convert(baseA, 10, number);
         }
 
         int finalFormat = decimalFormat;
-        if (baseB != 10)
+        if (baseB != base10)
         {
             finalFormat = convert(10, baseB, decimalFormat);
         }
