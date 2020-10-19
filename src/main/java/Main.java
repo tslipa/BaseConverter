@@ -16,6 +16,8 @@ public class Main
             return;
         }
 
+        System.out.println("Test");
+
         int baseA;
         int baseB;
         int number;
