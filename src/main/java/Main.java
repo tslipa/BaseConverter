@@ -1,5 +1,12 @@
+/**
+ * Main class of the app.
+ */
 public class Main
 {
+    /**
+     * Main method of the app, that gets the parameters and calls the converting method.
+     * @param args command line parameters - bases and number to convert
+     */
     public static void main(String[] args)
     {
         int expectedNumOfArgs = 3;

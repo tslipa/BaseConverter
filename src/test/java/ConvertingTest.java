@@ -3,8 +3,14 @@ import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * Testing class.
+ */
 public class ConvertingTest
 {
+    /**
+     * Test of correct given data.
+     */
     @Test
     public void testCorrectData()
     {
@@ -19,6 +25,9 @@ public class ConvertingTest
         catch (ConversionException e) { }
     }
 
+    /**
+     * Test of incorrect given data, where ConversionException should be thrown.
+     */
     @Test
     public void testConversionException()
     {
